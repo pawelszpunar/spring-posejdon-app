@@ -1,9 +1,17 @@
 package com.pawelszpunar.module.book;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "book")
 public class BookEntity {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String author;
+
     private String title;
 
     public Long getId() {
